@@ -1,0 +1,38 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+</head>
+<body>
+    <div> 
+            <table>
+                    <thead>
+                            <tr>
+                                    <th>Id</th>
+                                    <th>Nome</th>
+                                    @*<th>Fução</th>*@
+                            </tr>
+                    </thead>
+                    <tbody>
+                            @foreach(var pessoa in ViewBag.Pessoas)
+                            {
+                            <tr>
+                                    <td>@pessoa.Id</td>
+                                    <td>@pessoa.Nome</td>
+                                    @*<td>@ViewBag.Pessoas.Funcoes.DescFuncao</td>*@
+                                    
+                            </tr>
+                            }
+                    </tbody>
+
+            </table>
+    </div>
+</body>
+</html>

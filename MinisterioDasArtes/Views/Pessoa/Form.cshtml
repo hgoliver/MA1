@@ -1,0 +1,31 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width"/>
+    <title>Form</title>
+</head>
+<body>
+    <div> 
+            <form action="/Pessoa/Adiciona"  method="post">
+                    <label for="nome">Nome:</label>
+                    <input id="nome" name="pessoa.Nome" />
+
+                    @*<select id="funcao" name="pessoa.FuncaoId">
+                            @foreach (var funcao in ViewBag.Funcoes)
+                            {
+                            <option value="@funcao.Id">@funcao.NomeFuncao</option>
+                            }
+                    </select>*@
+
+
+                    <input type="submit"  value="Cadastrar" />
+            </form>
+    </div>
+</body>
+</html>
