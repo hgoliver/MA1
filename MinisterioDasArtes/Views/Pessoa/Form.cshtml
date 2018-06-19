@@ -14,14 +14,14 @@
     <div> 
             <form action="/Pessoa/Adiciona"  method="post">
                     <label for="nome">Nome:</label>
-                    <input id="nome" name="pessoa.Nome" />
+                    <input id="nome" name="Nome" />
 
-                    @*<select id="funcao" name="pessoa.FuncaoId">
+                    <select id="funcao" name="FuncaoId">
                             @foreach (var funcao in ViewBag.Funcoes)
                             {
-                            <option value="@funcao.Id">@funcao.NomeFuncao</option>
+                            <option value="@funcao.id">@funcao.NomeFuncao</option>
                             }
-                    </select>*@
+                    </select>
 
 
                     <input type="submit"  value="Cadastrar" />

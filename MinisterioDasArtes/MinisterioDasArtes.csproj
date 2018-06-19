@@ -105,7 +105,9 @@
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\PessoaController.cs" />
     <Compile Include="DAO\FuncoesDAO.cs" />
+    <Compile Include="DAO\PessoaFuncaoDAO.cs" />
     <Compile Include="DAO\PessoasDAO.cs" />
+    <Compile Include="DTO\PessoaDTO.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>

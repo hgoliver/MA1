@@ -1,6 +1,7 @@
 ﻿using System.Collections.Generic;
 using System.Web.Mvc;
 using MinisterioDasArtes.DAO;
+using MinisterioDasArtes.DTO;
 using MinisterioDasArtes.Models;
 
 
@@ -29,11 +30,20 @@ namespace MinisterioDasArtes.Controllers
                 }
 
                 [HttpPost]
-                public ActionResult Adiciona(MA01_Pessoa pessoa)
+                public ActionResult Adiciona(PessoaDTO pessoaDTO)
                 {
-                
-                        PessoasDAO dao = new PessoasDAO();
-                        dao.Adiciona(pessoa);
+                        MA01_Pessoa pessoa = new MA01_Pessoa()
+                        {
+                                Nome = pessoaDTO.Nome
+                        };
+
+                        MA03_PessoaFuncao pessoaFuncao = new MA03_PessoaFuncao()
+                        {
+                                MA01_Pessoa = pessoa,
+                                IdFuncao = pessoaDTO.FuncaoId
+                        };
+
+                        new PessoaFuncaoDAO().Adiciona(pessoaFuncao);
 
                         return RedirectToAction("Index", "Pessoa");
                 }

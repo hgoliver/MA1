@@ -17,7 +17,7 @@
                             <tr>
                                     <th>Id</th>
                                     <th>Nome</th>
-                                    @*<th>Fução</th>*@
+                                    <th>Funções</th>
                             </tr>
                     </thead>
                     <tbody>
@@ -26,7 +26,12 @@
                             <tr>
                                     <td>@pessoa.Id</td>
                                     <td>@pessoa.Nome</td>
-                                    @*<td>@ViewBag.Pessoas.Funcoes.DescFuncao</td>*@
+                                    <td>
+                                        @foreach (var funcao in pessoa.MA03_PessoaFuncao)
+                                        {
+                                                @funcao.MA05_Funcao.DescFuncao
+                                        }
+                                </td>
                                     
                             </tr>
                             }

@@ -18,7 +18,8 @@ namespace MinisterioDasArtes.Models
         public DateTime? DtaAtualizacao { get; set; }
 
         public int? IdPessoaCRUD { get; set; }
-
+        
+        //[ForeignKey("IdPessoa")]
         public virtual MA01_Pessoa MA01_Pessoa { get; set; }
 
         public virtual MA05_Funcao MA05_Funcao { get; set; }

@@ -14,6 +14,7 @@ namespace MinisterioDasArtes.DAO
                         using (var context = new MinisterioDasArtes())
                         {
                                 context.MA01_Pessoa.Add(pessoa);
+                                //context.MA03_PessoaFuncao.Add(funcao.)
                                 context.SaveChanges();
                         }
                 }
@@ -23,7 +24,7 @@ namespace MinisterioDasArtes.DAO
                         using (var contexto = new MinisterioDasArtes())
                         {
                                 //return contexto.Pessoas.Include("Funcoes").ToList();
-                                return contexto.MA01_Pessoa.ToList();
+                                return contexto.MA01_Pessoa.Include("MA03_PessoaFuncao.MA05_Funcao").ToList();
                         }
                 }
 
